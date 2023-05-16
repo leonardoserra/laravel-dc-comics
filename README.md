@@ -7,4 +7,5 @@
 > - show()  
 > - create()  
 > - store()  
+  
 ***Bonus: creare il seeder per la tabella comics utilizzando il file in allegato.***
