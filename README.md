@@ -8,4 +8,7 @@
 > - create()  
 > - store()  
   
-***Bonus: creare il seeder per la tabella comics utilizzando il file in allegato.***
+***Bonus: creare il seeder per la tabella comics utilizzando il file in allegato.***  
+  
+!['comics.txt'](/comics.txt)
+
