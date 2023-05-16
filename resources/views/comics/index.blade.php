@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Home Page')
+@section('page-title', 'Comics List')
 
 @section('content')
       <div class="container">
@@ -20,11 +20,11 @@
                                     <tr>
                                           <td scope="row">{{ $comic->id }}</td>
                                           <td>{{ $comic->title }}</td>
-                                          <td>{{ $comic->price }}</td>
+                                          <td>{{ $comic->price }}€</td>
                                           <td>{{ $comic->series }}</td>
                                           <td>
                                                 <a class="btn btn-primary"
-                                                      href="{{ route('comics.show', ['comic' => $comic->id]) }}">Dettagli</a>
+                                                      href="{{ route('comics.show', ['comic' => $comic->id]) }}">Details</a>
                                           </td>
                                     </tr>
                               @endforeach

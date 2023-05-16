@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
+use App\Http\Controllers\Guest\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +13,6 @@ use App\Http\Controllers\ComicController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::resource('comics', ComicController::class);
