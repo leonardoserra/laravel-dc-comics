@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Model\Comic;
+use App\Models\Comic;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
