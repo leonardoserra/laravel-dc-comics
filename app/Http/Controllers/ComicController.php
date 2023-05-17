@@ -39,15 +39,16 @@ class ComicController extends Controller
     {
         $data_received = $request->all();
         // dd($data_received);
-        $newComic = new Comic();
 
-        $newComic->title = $data_received['title'];
-        $newComic->description = $data_received['description'];
-        $newComic->thumb = $data_received['thumb'];
-        $newComic->price = $data_received['price'];
-        $newComic->series = $data_received['series'];
-        $newComic->sale_date = $data_received['sale_date'];
-        $newComic->type = $data_received['type'];
+        $newComic = new Comic();
+        $newComic->fill($data_received);
+        // $newComic->title = $data_received['title'];
+        // $newComic->description = $data_received['description'];
+        // $newComic->thumb = $data_received['thumb'];
+        // $newComic->price = $data_received['price'];
+        // $newComic->series = $data_received['series'];
+        // $newComic->sale_date = $data_received['sale_date'];
+        // $newComic->type = $data_received['type'];
         $newComic->save();
 
         return redirect()->route('comics.show',['comic' => $newComic->id]);
@@ -61,9 +62,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
+        // $comic = Comic::findOrFail($id);
         return view('comics.show', compact('comic'));
     }
 
