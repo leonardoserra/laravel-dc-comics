@@ -58,6 +58,7 @@
                                     <input type="text" class="form-control" id="type" name="type"
                                           value="{{ $comic->type }}">
                               </div>
+                              <a class="btn btn-warning" href="{{ route('comics.index') }}">Back</a>
 
                               <button class="btn btn-primary" type="submit">Modify</button>
                         </form>

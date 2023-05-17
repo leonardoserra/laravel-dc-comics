@@ -5,7 +5,11 @@
 @section('content')
       <div class="container">
             <div class="row">
-                  <h1>MADE BY LEONARDO SERRA</h1>
+                  <div class="col text-center mt-5">
+
+                        <h1>Made by: LEONARDO SERRA - classe 87</h1>
+                        <a class="btn btn-primary" href="{{ route('comics.index') }}">Back</a>
+                  </div>
 
             </div>
       </div>

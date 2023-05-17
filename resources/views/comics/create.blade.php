@@ -50,6 +50,7 @@
                                           id="inputGroup-sizing-default">Type</span>
                                     <input type="text" class="form-control" id="type" name="type">
                               </div>
+                              <a class="btn btn-warning" href="{{ route('comics.index') }}">Back</a>
 
                               <button class="btn btn-primary" type="submit">Save</button>
                         </form>
