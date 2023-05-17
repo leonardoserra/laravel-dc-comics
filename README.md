@@ -10,12 +10,14 @@
   
 ***Bonus: creare il seeder per la tabella comics utilizzando il file in allegato.***  
   
-
+  
 *giorno2*
 - oggi lavorate sulla stessa repo di ieri e completate le operazioni CRUD.  
-***Bonus: tramite javascript, quando l’utente clicca sul pulsante “delete”, chiedere conferma della cancellazione, prima di eliminare l’elemento.***
+***Bonus: tramite javascript, quando l’utente clicca sul pulsante “delete”, chiedere conferma della cancellazione, prima di eliminare l’elemento.***  
 
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     <?php
 
     return [
