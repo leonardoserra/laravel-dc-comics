@@ -94,7 +94,7 @@ class ComicController extends Controller
         $data_received = $request->all();
         $comic->update($data_received);
 
-        return redirect()->route('comics.show',['comic' => $newComic->id]);
+        return redirect()->route('comics.show',['comic' => $comic->id]);
         
     }
 
