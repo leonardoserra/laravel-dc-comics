@@ -13,6 +13,7 @@
                               <h5 class="card-title">{{ $comic->title }}</h5>
                               <p class="card-text">{{ $comic->description }}</p>
                               <a href="#" class="btn btn-primary">BUY</a>
+                              <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modify</a>
                         </div>
                   </div>
             </div>
