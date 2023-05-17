@@ -16,7 +16,7 @@
                               </tr>
                         </thead>
                         <tbody>
-                              @foreach ($comics as $comic)
+                              @forelse ($comics as $comic)
                                     <tr>
                                           <td scope="row">{{ $comic->id }}</td>
                                           <td>{{ $comic->title }}</td>
@@ -37,7 +37,11 @@
                                                 </form>
                                           </td>
                                     </tr>
-                              @endforeach
+                              @empty
+                                    <div class="alert alert-info" role="alert">
+                                          The Database is Empty! Start creating your own Comic!
+                                    </div>
+                              @endforelse
                         </tbody>
                   </table>
 
