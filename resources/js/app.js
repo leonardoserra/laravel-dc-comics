@@ -6,17 +6,23 @@ import.meta.glob([
 ])
 
 
-const deleteButton = document.querySelector(".btn.btn-danger");
+const dangerButtons = document.querySelectorAll(".btn-danger");
 
-deleteButton.addEventListener('click', warningAlert);
+dangerButtons.forEach((button) =>
+
+    button.addEventListener('click', function () {
 
 
-function warningAlert() {
-    const answer = prompt('digit "yes" if you really want to delete it')
+        const answer = prompt('digit "yes" if you really want to delete it');
+        if (answer != "yes") {
+            return;
+        } else {
+            alert('the element has been deleted')
+            return;
+        }
+    })
+)
 
-    if (answer != "yes") {
-        return null;
-    } else {
-        alert('the element has been deleted')
-    }
-}
+
+
+
