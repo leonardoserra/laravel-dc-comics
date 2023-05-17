@@ -6,11 +6,17 @@ import.meta.glob([
 ])
 
 
-const deleteButton = document.getElementById("delete-button");
+const deleteButton = document.querySelector(".btn.btn-danger");
 
 deleteButton.addEventListener('click', warningAlert);
 
 
 function warningAlert() {
-    alert('sicuro di volerlo eliminare');
+    const answer = prompt('digit "yes" if you really want to delete it')
+
+    if (answer != "yes") {
+        return null;
+    } else {
+        alert('the element has been deleted')
+    }
 }
