@@ -13,12 +13,19 @@ dangerButtons.forEach((button) =>
     button.addEventListener('click', function () {
 
 
-        const answer = prompt('digit "yes" if you really want to delete it');
-        if (answer != "yes") {
-            return;
-        } else {
-            alert('the element has been deleted')
-            return;
+        let flag = false;
+        while (!flag) {
+            const answer = prompt('are you sure? digit "yes" or "no"');
+            if (answer === "no") {
+                this.button.disabled = true;
+                flag = true;
+            } else if (answer === "yes") {
+                alert('the element has been deleted')
+                flag = true;
+
+            } else {
+                alert('digit yes or no')
+            }
         }
     })
 )
