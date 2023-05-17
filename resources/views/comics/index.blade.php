@@ -22,17 +22,17 @@
                                           <td>{{ $comic->title }}</td>
                                           <td>{{ $comic->price }}€</td>
                                           <td>{{ $comic->series }}</td>
-                                          <td>
+                                          <td class="d-flex">
                                                 <a class="btn btn-primary"
                                                       href="{{ route('comics.show', ['comic' => $comic->id]) }}">Details</a>
-                                                <a class="btn btn-warning"
+                                                <a class="btn btn-warning ms-1 me-1"
                                                       href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modify</a>
-                                                <form method="POST"
-                                                      action="{{ route('comics.destroy', ['comic' => $comic->id]) }}">
+                                                <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"
+                                                      method="POST">
 
                                                       @csrf
                                                       @method('DELETE')
-                                                      <a class="btn btn-danger" type="submit">Delete</a>
+                                                      <button class="btn btn-danger" type="submit">Delete</button>
 
                                                 </form>
                                           </td>
