@@ -14,5 +14,6 @@ use App\Http\Controllers\Guest\PageController;
 |
 */
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('credits', [PageController::class, 'credits'])->name('credits');
 
 Route::resource('comics', ComicController::class);

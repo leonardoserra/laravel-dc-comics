@@ -12,4 +12,10 @@ class PageController extends Controller
         // return view('home', compact('comics'))->name('home');
         return redirect()->route('comics.index');
     }
+
+    public function credits(){
+        $comics = Comic::all();
+        // return view('home', compact('comics'))->name('home');
+        return view('credits', compact('comics'));
+    }
 }
