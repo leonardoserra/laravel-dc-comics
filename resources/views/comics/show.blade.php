@@ -2,6 +2,7 @@
 
 @section('page-title', 'Comics List')
 
+
 @section('content')
       <div class="text-center"></div>
       <div class="container text-center">
