@@ -18,38 +18,94 @@
                               <div class="input-group mb-3">
                                     <span style="width: 7rem" class="input-group-text"
                                           id="inputGroup-sizing-default">Title</span>
-                                    <input type="text" class="form-control" id="title" name="title">
+                                    <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                          id="title" name="title" value="">
                               </div>
+
+                              <div>
+                                    @error('title')
+                                          <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                              </div>
+
                               <div class="input-group mb-3">
                                     <span style="width: 7rem" class="input-group-text"
                                           id="inputGroup-sizing-default">Description</span>
-                                    <input type="text" class="form-control" id="description" name="description">
+                                    <input type="text" class="form-control @error('description') is-invalid @enderror"
+                                          id="description" name="description">
                               </div>
+
+                              <div>
+                                    @error('description')
+                                          <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                              </div>
+
                               <div class="input-group mb-3">
                                     <span style="width: 7rem" class="input-group-text" id="inputGroup-sizing-default">Image
                                           URL</span>
-                                    <input type="text" class="form-control" id="thumb" name="thumb">
+                                    <input type="text" class="form-control @error('thumb') is-invalid @enderror"
+                                          id="thumb" name="thumb">
                               </div>
+
+                              <div>
+                                    @error('thumb')
+                                          <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                              </div>
+
                               <div class="input-group mb-3">
                                     <span style="width: 7rem" class="input-group-text"
                                           id="inputGroup-sizing-default">Price</span>
-                                    <input type="text" class="form-control" id="price" name="price">
+                                    <input type="text" class="form-control @error('price') is-invalid @enderror"
+                                          id="price" name="price">
                               </div>
+
+                              <div>
+                                    @error('price')
+                                          <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                              </div>
+
                               <div class="input-group mb-3">
                                     <span style="width: 7rem" class="input-group-text"
                                           id="inputGroup-sizing-default">Series</span>
-                                    <input type="text" class="form-control" id="series" name="series">
+                                    <input type="text" class="form-control @error('series') is-invalid @enderror"
+                                          id="series" name="series">
                               </div>
+
+                              <div>
+                                    @error('series')
+                                          <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                              </div>
+
                               <div class="input-group mb-3">
                                     <span style="width: 7rem" class="input-group-text" id="inputGroup-sizing-default">Sale
                                           Date</span>
-                                    <input type="text" class="form-control" id="sale_date" name="sale_date">
+                                    <input type="text" class="form-control @error('sale_date') is-invalid @enderror"
+                                          id="sale_date" name="sale_date">
                               </div>
+
+                              <div>
+                                    @error('sale_date')
+                                          <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                              </div>
+
                               <div class="input-group mb-3">
-                                    <span style="width: 7rem" class="input-group-text"
+                                    <span style="width: 7rem" class="input-group-text "
                                           id="inputGroup-sizing-default">Type</span>
-                                    <input type="text" class="form-control" id="type" name="type">
+                                    <input type="text" class="form-control @error('type') is-invalid @enderror"
+                                          id="type" name="type">
                               </div>
+
+                              <div>
+                                    @error('type')
+                                          <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                              </div>
+
                               <a class="btn btn-warning" href="{{ route('comics.index') }}">Back</a>
 
                               <button class="btn btn-primary" type="submit">Save</button>

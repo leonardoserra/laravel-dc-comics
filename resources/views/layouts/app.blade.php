@@ -25,6 +25,7 @@
                   </ul>
             </div>
       @endif
+
       @yield('content')
 
 
