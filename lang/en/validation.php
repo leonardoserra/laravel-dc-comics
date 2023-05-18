@@ -163,9 +163,57 @@ return [
     */
 
     'custom' => [
+        
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+
+        'title' =>[
+            'required' => 'il campo :attribute è obbligatorio.',
+            'max' => [
+                'string' => 'Il :attribute non puo avere piú di :max caratteri.',
+            ],
+            
+        ],
+
+        'description' =>[
+            'required' => 'il campo :attribute è obbligatorio.',
+            'max' => [
+                'string' => 'Il :attribute non puo avere piú di :max caratteri.',
+            ],
+        ],
+
+        'thumb' =>[
+            'required' => 'il campo :attribute è obbligatorio.',
+            'max' => [
+                'string' => 'Il :attribute non puo avere piú di :max caratteri.',
+            ],
+            'url' => 'Il campo :attribute deve essere valido.',
+        ],
+
+        'price' =>[
+            'required' => 'il campo :attribute è obbligatorio.',
+            'decimal' => 'Il :attribute deve avere :decimal posizioni decimali.',
+        ],
+
+        'series' =>[
+            'required' => 'il campo :attribute è obbligatorio.',
+            'max' => [
+                'string' => 'Il :attribute non puo avere piú di :max caratteri.',
+            ],
+        ],
+
+        'sale_date' =>[
+            'required' => 'il campo :attribute è obbligatorio.',
+            'date' => "L'attributo :attribute non è una data in un formato valido.",
+        ],
+
+        'type' =>[
+            'required' => 'il campo :attribute è obbligatorio.',
+            'max' => [
+                'string' => 'Il :attribute non puo avere piú di :max caratteri.',
+            ],
+        ]
     ],
 
     /*
