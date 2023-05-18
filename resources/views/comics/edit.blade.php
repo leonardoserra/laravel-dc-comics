@@ -32,7 +32,8 @@
                                     <span style="width: 7rem" class="input-group-text"
                                           id="inputGroup-sizing-default">Description</span>
                                     <input type="text" class="form-control @error('description') is-invalid @enderror"
-                                          id="description" name="description" value="{{ old('title', $comic->description) }}">
+                                          id="description" name="description"
+                                          value="{{ old('description', $comic->description) }}">
                               </div>
 
                               <div>
@@ -44,7 +45,7 @@
                                     <span style="width: 7rem" class="input-group-text" id="inputGroup-sizing-default">Image
                                           URL</span>
                                     <input type="text" class="form-control @error('thumb') is-invalid @enderror"
-                                          id="thumb" name="thumb" value="{{ old('title', $comic->thumb) }}">
+                                          id="thumb" name="thumb" value="{{ old('thumb', $comic->thumb) }}">
                               </div>
 
                               <div>
@@ -56,7 +57,7 @@
                                     <span style="width: 7rem" class="input-group-text"
                                           id="inputGroup-sizing-default">Price</span>
                                     <input type="text" class="form-control @error('price') is-invalid @enderror"
-                                          id="price" name="price" value="{{ old('title', $comic->price) }}">
+                                          id="price" name="price" value="{{ old('price', $comic->price) }}">
                               </div>
 
                               <div>
@@ -68,7 +69,7 @@
                                     <span style="width: 7rem" class="input-group-text"
                                           id="inputGroup-sizing-default">Series</span>
                                     <input type="text" class="form-control @error('series') is-invalid @enderror"
-                                          id="series" name="series" value="{{ old('title', $comic->series) }}">
+                                          id="series" name="series" value="{{ old('series', $comic->series) }}">
                               </div>
 
                               <div>
@@ -80,7 +81,7 @@
                                     <span style="width: 7rem" class="input-group-text" id="inputGroup-sizing-default">Sale
                                           Date</span>
                                     <input type="text" class="form-control @error('sale_date') is-invalid @enderror"
-                                          id="sale_date" name="sale_date" value="{{ old('title', $comic->sale_date) }}">
+                                          id="sale_date" name="sale_date" value="{{ old('sale_date', $comic->sale_date) }}">
                               </div>
 
                               <div>
@@ -92,7 +93,7 @@
                                     <span style="width: 7rem" class="input-group-text"
                                           id="inputGroup-sizing-default">Type</span>
                                     <input type="text" class="form-control @error('type') is-invalid @enderror"
-                                          id="type" name="type" value="{{ old('title', $comic->type) }}">
+                                          id="type" name="type" value="{{ old('type', $comic->type) }}">
                               </div>
 
                               <div>
