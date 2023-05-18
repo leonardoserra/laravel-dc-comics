@@ -27,7 +27,7 @@
                                                       href="{{ route('comics.show', ['comic' => $comic->id]) }}">Details</a>
                                                 <a class="btn btn-warning ms-1 me-1"
                                                       href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modify</a>
-                                                <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"
+                                                <form class="form-delete-comic" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"
                                                       method="POST">
 
                                                       @csrf

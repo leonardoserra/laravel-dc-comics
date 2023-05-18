@@ -6,26 +6,18 @@ import.meta.glob([
 ])
 
 
-const dangerButtons = document.querySelectorAll(".btn-danger");
+const dangerButtons = document.querySelectorAll(".form-delete-comic button[type='submit']");
 
 dangerButtons.forEach((button) =>
 
-    button.addEventListener('click', function () {
+    button.addEventListener('click', event => {
 
+        event.preventDefault();
 
-        let flag = false;
-        while (!flag) {
-            const answer = prompt('are you sure? digit "yes" or "no"');
-            if (answer === "no") {
-                this.button.disabled = true;
-                flag = true;
-            } else if (answer === "yes") {
-                alert('the element has been deleted')
-                flag = true;
+        const userChoice = confirm('Are you sure to delete this?');
 
-            } else {
-                alert('digit yes or no')
-            }
+        if (userChoice) {
+            button.parentElement.submit();
         }
     })
 )
