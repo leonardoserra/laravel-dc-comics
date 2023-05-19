@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
-
+use App\Requests\StoreComicRequest;
+use App\Requests\UpdateComicRequest;
 class ComicController extends Controller
 {
     /**
@@ -35,31 +36,15 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
+        //it takes validation from StoreComicRequests file
+        $data_received = $request->validated();
 
-        $request->validate([
-            'title'=>'required|max:150',
-            'description'=>'required|max:20000',
-            'thumb'=>'required|max:60000|url',
-            'price'=>'required|decimal:0,2',
-            'series'=>'required|max:20000',
-            'sale_date'=>'required|date',
-            'type'=>'required|max:20000',
-        ]);
-
-        $data_received = $request->all();
         // dd($data_received);
 
         $newComic = new Comic();
         $newComic->fill($data_received);
-        // $newComic->title = $data_received['title'];
-        // $newComic->description = $data_received['description'];
-        // $newComic->thumb = $data_received['thumb'];
-        // $newComic->price = $data_received['price'];
-        // $newComic->series = $data_received['series'];
-        // $newComic->sale_date = $data_received['sale_date'];
-        // $newComic->type = $data_received['type'];
         $newComic->save();
 
         return redirect()->route('comics.show',['comic' => $newComic->id])->with('status','New comic created succesfully');
@@ -99,21 +84,11 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
 
-       
-        $request->validate([
-            'title'=>'required|max:150',
-            'description'=>'required|max:20000',
-            'thumb'=>'required|max:60000|url',
-            'price'=>'required|decimal:0,2',
-            'series'=>'required|max:20000',
-            'sale_date'=>'required|date',
-            'type'=>'required|max:20000',
-        ]);
-
-        $data_received = $request->all();
+        //it takes validation from UpdateComicRequests file
+        $data_received = $request->validated();
         $comic->update($data_received);
 
         return redirect()->route('comics.show',['comic' => $comic->id])->with('status','Comic updated succesfully');
