@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Comic;
-use App\Requests\StoreComicRequest;
-use App\Requests\UpdateComicRequest;
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 class ComicController extends Controller
 {
     /**
