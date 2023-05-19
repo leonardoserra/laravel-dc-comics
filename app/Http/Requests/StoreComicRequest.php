@@ -43,7 +43,7 @@ class StoreComicRequest extends FormRequest
             'title.max' => 'titolo... mica lista di nozze',
 
             'description.required' => 'scrivi qualcosa giusto per farmi capire di che si tratta',
-            'description.max' => 'prova ad essere piú sintetico...',
+            'description.max' => 'qualcosa mi dice che i riassunti alle medie non erano il tuo forte....',
 
             'thumb.required' => 'e che non ci vuoi mettere l\'immagine? A un fumetto??',
             'thumb.max' => 'ok che gli url sono lunghi.. ma questo forse lo è troppo',
