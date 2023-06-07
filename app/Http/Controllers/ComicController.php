@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Comic;
 use App\Http\Requests\StoreComicRequest;
 use App\Http\Requests\UpdateComicRequest;
+
 class ComicController extends Controller
 {
     /**
@@ -26,7 +27,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-      
+
         return view('comics.create');
     }
 
@@ -47,9 +48,7 @@ class ComicController extends Controller
         $newComic->fill($data_received);
         $newComic->save();
 
-        return redirect()->route('comics.show',['comic' => $newComic->id])->with('status','New comic created succesfully');
-
-
+        return redirect()->route('comics.show', ['comic' => $newComic->id])->with('status', 'New comic created succesfully');
     }
 
     /**
@@ -62,8 +61,7 @@ class ComicController extends Controller
     {
         // $comic = Comic::findOrFail($id);
         return view('comics.show', compact('comic'));
-        return redirect()->route('comics.show',['comic' => $newComic->id]);
-
+        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
 
     /**
@@ -91,8 +89,7 @@ class ComicController extends Controller
         $data_received = $request->validated();
         $comic->update($data_received);
 
-        return redirect()->route('comics.show',['comic' => $comic->id])->with('status','Comic updated succesfully');
-        
+        return redirect()->route('comics.show', ['comic' => $comic->id])->with('status', 'Comic updated succesfully');
     }
 
     /**
@@ -106,7 +103,5 @@ class ComicController extends Controller
 
         $comic->delete();
         return redirect()->route('comics.index');
-
-
     }
 }
